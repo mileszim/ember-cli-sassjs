@@ -15,7 +15,7 @@ Import `Sass` from 'sassjs' wherever you need to run the compile function. Sass.
 For example:
 
 ```javascript
-import
+...
 import Sass from 'sassjs';
 
 export default Ember.Controller.extend({
