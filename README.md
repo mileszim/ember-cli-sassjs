@@ -1,6 +1,6 @@
 # ember-cli-sassjs
 
-Ember addon for [https://github.com/medialize/sass.js](Sass.js from medialize).
+Ember addon for [Sass.js from medialize](https://github.com/medialize/sass.js).
 
 ## Installation
 
