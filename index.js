@@ -8,12 +8,12 @@ module.exports = {
   name: 'sassjs',
 
   included: function(app, parentAddon) {
-    this._super.included(target);
-    app.import('bower_directory/sass.js/dist/sass.worker.js');
+    this._super.included(app);
+    app.import('bower_components/sass.js/dist/sass.worker.js');
   },
 
   treeForApp: function(tree) {
-    var sassjsTree = this.pickFiles('bower_directory/sass.js', {
+    var sassjsTree = this.pickFiles('bower_components/sass.js', {
       srcDir: '/dist', destDir: '/assets/sass.js', files: ['worker.min.js']
     });
 
