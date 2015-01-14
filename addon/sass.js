@@ -16,6 +16,38 @@ export default Ember.Object.extend({
         resolve(css);
       });
     });
+  },
+
+  options: function(options) {
+    return new Ember.RSVP.Promise(function(resolve) {
+      window.Sass.options(options, function(response) {
+        resolve(response);
+      })
+    })
+  },
+
+  writeFile: function(filename) {
+    return new Ember.RSVP.Promise(function(resolve) {
+      window.Sass.writeFile(filename, function(success) {
+        resolve(success);
+      })
+    })
+  },
+
+  readFile: function(filename) {
+    return new Ember.RSVP.Promise(function(resolve) {
+      window.Sass.readFile(filename, function(content) {
+        resolve(content);
+      })
+    })
+  },
+
+  listFiles: function(filename) {
+    return new Ember.RSVP.Promise(function(resolve) {
+      window.Sass.listFiles(filename, function(list) {
+        resolve(list);
+      })
+    })
   }
 
 });
