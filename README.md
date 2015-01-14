@@ -30,3 +30,22 @@ export default Ember.Controller.extend({
 });
 ...
 ```
+
+
+### Options
+
+To use options, set them on the Sass object, and call your compile function afterwards:
+
+```javascript
+Sass.options({
+  // format output: nested, expanded, compact, compressed
+  style: 'compressed',
+
+  // add line comments to output: none, default
+  comments: 'none'
+});
+
+Sass.compile(scss).then(function(css) {
+  console.log(css);
+});
+```
